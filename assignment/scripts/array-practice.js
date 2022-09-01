@@ -100,10 +100,28 @@ console.log('FavFoods are now reverse alphabetically sorted',favFoods);
 // 4.g (STRETCH) TODO: Convert your array to a string
 //     putting the word "and" between each item.
 //     eg "tacos and pizza and pasta". Log the string.
-
-
+let favfoodString='';
+for(let i=0;i<favFoods.length;i++){
+    if(i<favFoods.length-1){
+        
+        favfoodString+=favFoods[i]+' and ';
+    }
+    else{
+        favfoodString+=favFoods[i];
+    }
+    
+}
+console.log('FavFood in a string: ',favfoodString);
 // 4.h (STRETCH) TODO: Make a new array that combines 
 //     the favorite foods array with the animals array.
 //     Then log the new array.
 //     It should look something like:
 //     ['pizza', 'pasta', 'fish', 'cat', 'bird', 'dog']
+let comboArray = [];
+for(food of favFoods){
+    comboArray.push(food);
+}
+for(animal of animalArray){
+    comboArray.push(animal);
+}
+console.log('Combination array',comboArray);
